@@ -1,0 +1,60 @@
+.i-noticebar {
+  display: flex;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 14px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.i-noticebar-icon {
+  display: flex;
+  margin-left: 30rpx;
+  align-items: center;
+}
+
+.i-noticebar-icon+view {
+  margin-left: 10rpx;
+}
+
+.i-noticebar-operation {
+  display: flex;
+  margin-right: 16rpx;
+  align-items: center;
+}
+
+.i-noticebar-content-wrap {
+  position: relative;
+  flex: 1;
+  margin: 0 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.i-noticebar-content-wrap .i-noticebar-content {
+  position: absolute;
+  transition-duration: 20s;
+}
+
+.notice-label {
+  margin-left: 15rpx;
+  width: 130rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40rpx;
+  color: #3cbaf7;
+}
+
+.notice-border {
+  width: 6rpx;
+  height: 50%;
+  background: #3cbaf7;
+}
+
+.notice-item {
+  height: 100%;
+  color: #ababab;
+}

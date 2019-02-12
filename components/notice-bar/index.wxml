@@ -1,0 +1,16 @@
+<view wx:if="{{ show }}" class="i-class i-noticebar">
+  <view class="notice-label">
+    <text>棉讯</text>
+    <view class="notice-border" />
+  </view>
+
+  <view class="i-noticebar-content-wrap">
+    <view class="i-noticebar-content {{loop?'i-noticebar-content-loop':''}}" animation="{{ animationData }}">
+
+      <view wx:for="{{data}}" class="notice-item">
+        {{item}}
+      </view>
+    </view>
+  </view>
+  <i-icon wx:if="{{closable}}" class="i-noticebar-operation" type="close" size="20" color="{{color}}" bindtap="handleClose"></i-icon>
+</view>

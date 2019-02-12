@@ -1,0 +1,9 @@
+<view class="loading-box" style="height:{{height}}">
+  <view class="loading-indicator" wx:if="{{loading}}">
+    <spin size="large" />
+    <text>{{tip}}</text>
+  </view>
+  <view wx:else>
+    <slot></slot>
+  </view>
+</view>

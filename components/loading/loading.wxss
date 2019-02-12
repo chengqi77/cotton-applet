@@ -1,0 +1,12 @@
+/* components/loading/loading.wxss */
+.loading-indicator{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.loading-indicator text{
+  font-size: 24rpx;
+  color: #000;
+}

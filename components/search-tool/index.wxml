@@ -1,0 +1,4 @@
+<!--components/search-tool/index.wxml-->
+<view class='search-container'>
+  <input value='' class='search-input' placeholder="通过批号/工厂/仓库搜索/" placeholder-class='search-input-placeholder'></input>
+</view>
