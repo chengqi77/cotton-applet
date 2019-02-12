@@ -1,31 +1,24 @@
 // pages/home/home.js
 const apis = require('../../utils/apis.js');
-const map = {
-  a: '长度',
-  b: '强力',
-  c: '马值',
-  d: '长整',
-  e: '回潮',
-  f: '含杂'
-};
-const bMap = {
-  j:'基差',
-  k: '元/吨',
-  i: '公重',
-};
-const aMap = {
-  aa:{
-    icon:'./img/order.png',
-    label:'批号'
-  },
-  bb: {
-    icon: './img/storage.png',
-    label: '仓库'
-  },
-  cc: {
-    icon: './img/gys.png',
-    label: '供应商'
-  }
+const mockItemData = {
+  name: '郑棉1905',
+  value: '15600',
+  time: '2019-01-11',
+  
+  cd: '12',
+  ql: 21.2,
+  mz: 1,
+  cz: '0.0',
+  hc: '0.0',
+  hz: '0.0',
+
+  jc: '+120',
+  'y/d': '15720',
+  zg: '45.555',
+
+  aa: "454212552",
+  bb: '中储棉库存厄尔有限责任公司',
+  cc: '河北星宇纺织原料有限责任公司'
 };
 Page({
 
@@ -39,32 +32,7 @@ Page({
     },
     notices: ['试管婴儿成功后,', '二胎妈妈andlajdka'],
     activeTabKey: 'a',
-    item: {
-      name: '郑棉1905',
-      value: '15600',
-      time: '2019-01-11',
-
-      a: '12',
-      b: 21.2,
-      c: 1,
-      d: '0.0',
-      e: '0.0',
-      f: '0.0',
-
-      j:'+120',
-      k:'15720',
-      i:'45.555',
-
-      aa:"454212552",
-      bb:'中储棉库存厄尔有限责任公司',
-      cc:'河北星宇纺织原料有限责任公司'
-    },
-    map,
-    aMap,
-    bMap,
-    itemKeyList: ['a', 'b', 'c', 'd', 'e','f'],
-    itemValueList:['j','k','i'],
-    itemDescList:['aa','bb','cc']
+    list: [mockItemData, mockItemData, mockItemData, mockItemData, mockItemData]
   },
 
   /**
@@ -94,6 +62,15 @@ Page({
     this.setData({
       activeTabKey: key,
     });
+  },
+  handleCall(item) {
+    console.log(item, 'handleCall');
+  },
+  handleClickShoppingCart(item){
+    console.log(item,'handleClickShoppingCart');
+  },
+  contact(){
+    console.log(wx)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

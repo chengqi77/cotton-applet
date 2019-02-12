@@ -1,86 +1,31 @@
 <view class="container">
   <search-tool />
+  <view class='tool-bar'>
+    <button  open-type='share' class='tool-bar-item'>
+      <image src='./img/share.png' class='tool-bar-item-icon'></image>
+      <text class='tool-bar-item-text'>分享</text>
+    </button>
+    <button open-type="contact" class='tool-bar-item'>
+      <image src='./img/kf.png' class='tool-bar-item-icon'></image>
+      <text class='tool-bar-item-text'>客服</text>
+    </button>
+  </view>
   <loading loading="{{banner.loading}}" height="280rpx" tip="获取图片中...">
     <swiper indicator-dots="true" autoplay="true" interval="3000" duration="300" style="height:280rpx">
       <block wx:for="{{banner.data}}">
         <swiper-item>
-          <image src="{{item}}" />
+          <image class='slide-img' src="{{item}}" />
         </swiper-item>
       </block>
     </swiper>
   </loading>
   <notice-bar loop="true" data="{{notices}}" />
   <tabs current="{{activeTabKey}}" bindchange="handleTabChange" i-class="tabs" scroll>
-    <tab key="a" title="新疆棉" count="3">
-      112
-    </tab>
+    <tab key="a" title="新疆棉" count="3"></tab>
     <tab key="b" title="地产棉" count="3"></tab>
     <tab key="c" title="进口棉" count="3"></tab>
     <tab key="d" title="进口棉" count="3"></tab>
     <tab key="e" title="拍储棉" count="3"></tab>
   </tabs>
-  <view class='item'>
-    <view class='item-title'>
-      <view class='item-title-left'>
-        <text class='item-name'>{{item.name}}</text>
-        <text class='item-value'>({{item.value}})</text>
-      </view>
-      <view class='item-title-right'>
-        <text class='item-time'>{{item.time}}</text>
-      </view>
-    </view>
-    <view class='item-tags'>
-      <view class='item-tags-group'>
-        <tag>颜色级21</tag>
-        <tag>黄染棉2级</tag>
-        <tag>长绒棉</tag>
-        <tag>格斯</tag>
-        <tag color="green" type="border">
-          现货
-        </tag>
-      </view>
-    </view>
-    <view class='item-info-list'>
-      <block wx:for="{{itemKeyList}}" wx:for-item="itemI">
-        <view class="item-info-item">
-          <view class='item-info-item-content'>
-            <text class='item-info-item-title'>{{map[itemI]}}</text>
-            <text class='item-info-item-value'>{{item[itemI]}}</text>
-          </view>
-          <view class='item-info-item-border' wx:if="{{index !==itemKeyList.length-1}}"></view>
-        </view>
-      </block>
-    </view>
-    <view class='item-info-list'>
-      <block wx:for="{{itemValueList}}" wx:for-item="itemI">
-        <view class="item-info-item">
-          <view class='item-info-item-content'>
-            <text class='item-info-item-title'>{{bMap[itemI]}}</text>
-            <text class='item-info-item-value'>{{item[itemI]}}</text>
-          </view>
-          <view class='item-info-item-border' wx:if="{{index !==itemKeyList.length-1}}"></view>
-        </view>
-      </block>
-    </view>
-    <view class='item-bottom'>
-      <view class='item-desc-list'>
-        <block wx:for="{{itemDescList}}" wx:for-item="itemI">
-          <view class="item-desc-item">
-            <image mode='aspectFit' class='item-desc-item-icon' src='{{aMap[itemI].icon}}'></image>
-            <text class='item-desc-item-text'>:{{item[itemI]}}</text>
-          </view>
-        </block>
-      </view>
-      <view class='btn-group'>
-        <view class='btn'>
-          <image class='btn-icon' src='./img/mobile.png'></image>
-          <text class='btn-text'>电话</text>
-        </view>
-        <view class='btn'>
-          <image class='btn-icon' src='./img/car.png'></image>
-          <text class='btn-text'>购物车</text>
-        </view>
-      </view>
-    </view>
-  </view>
+  <home-item wx:for="{{list}}" data="{{item}}" bind:handleCall="handleCall" bind:handleClickShoppingCart="handleClickShoppingCart" />
 </view>

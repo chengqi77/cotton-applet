@@ -3,124 +3,39 @@
 .container {
   position: relative;
 }
-
+.slide-img{
+  width: 100%;
+}
 .tabs {
   margin-top: 15rpx;
 }
 
-.item {
-  background: #fff;
-  padding: 10px;
+.tool-bar{
+  position: fixed;
+  bottom: 40rpx;
+  right: 40rpx;
 }
-
-.item-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.item-name {
-  font-size: 18px;
-  color: #000;
-}
-
-.item-value {
-  font-size: 14px;
-  color: #000;
-}
-
-.item-time {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.item-tags tag {
-  margin-right: 4px;
-}
-
-.item-info-list {
-  margin: 0 -10px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: row;
-}
-
-.item-info-item {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.item-info-item-content {
-  flex: 1;
+.tool-bar-item{
+  margin-bottom: 20rpx;
+  padding: 0;
+  line-height: normal;
+  width: 90rpx;
+  height: 90rpx;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.item-info-item-border {
-  margin: 4px 0;
-  width: 1px;
-  height: 20px;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.item-info-item-title {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.item-info-item-value {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.item-bottom {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: row;
-}
-
-.item-desc-list {
-  flex: 1;
-}
-
-.item-desc-item {
-  display: flex;
-  height: 20px;
-  flex-direction: row;
-  align-items: center;
-}
-
-.item-desc-item-icon {
-  width: 10px;
-  height: 10px;
-}
-
-.item-desc-item-text {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.6);
   
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(204,204,204,0.3);
+  box-shadow: 1px 1px 6px #ccc;
 }
-
-.btn-group {
-  align-self: flex-end;
+.tool-bar-item-icon{
+  width: 26rpx;
+  height: 26rpx;
 }
-
-.btn {
-  display: flex;
-  height: 20px;
-  flex-direction: row;
-  align-items: center;
-  border-bottom: 1rpx solid rgba(0, 0, 0, 0.2);
-}
-
-.btn-icon {
-  width: 10px;
-  height: 10px;
-}
-
-.btn-text {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.8);
+.tool-bar-item-text{
+  font-size: 28rpx;
+  color: #000;
 }
