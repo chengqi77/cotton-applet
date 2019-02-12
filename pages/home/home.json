@@ -1,11 +1,11 @@
 {
+  "navigationBarTitleText": "首页",
   "usingComponents": {
     "loading": "../../components/loading/loading",
     "notice-bar": "../../components/notice-bar/index",
     "tabs": "../../components/tabs/index",
     "tab": "../../components/tab/index",
     "search-tool": "../../components/search-tool/index",
-   
     "home-item": "../../components/home-item/index"
   }
 }

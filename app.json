@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/supply-demand/index",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/supply-demand"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,8 +22,8 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "接口"
+        "pagePath": "pages/supply-demand/index",
+        "text": "供需"
       }
     ]
   }
