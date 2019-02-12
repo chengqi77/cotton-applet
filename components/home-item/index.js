@@ -1,18 +1,6 @@
 // components/home-itme/index.js
+const config = require('../../utils/config.js');
 
-const map = {
-  a: '长度',
-  b: '强力',
-  c: '马值',
-  d: '长整',
-  e: '回潮',
-  f: '含杂'
-};
-const bMap = {
-  j: '基差',
-  k: '元/吨',
-  i: '公重',
-};
 const aMap = {
   aa: {
     icon: './img/order.png',
@@ -41,11 +29,10 @@ Component({
    * 组件的初始数据
    */
   data: {
-    map,
+    map: config.map.main,
     aMap,
-    bMap,
-    itemKeyList: ['a', 'b', 'c', 'd', 'e', 'f'],
-    itemValueList: ['j', 'k', 'i'],
+    itemKeyList: ['cd', 'ql', 'mz', 'cz', 'hc', 'hz'],
+    itemValueList: ['jc', 'y/d', 'zg'],
     itemDescList: ['aa', 'bb', 'cc']
   },
 

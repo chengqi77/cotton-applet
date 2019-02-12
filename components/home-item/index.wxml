@@ -35,7 +35,7 @@
     <block wx:for="{{itemValueList}}" wx:for-item="itemI">
       <view class="item-info-item">
         <view class='item-info-item-content'>
-          <text class='item-info-item-title'>{{bMap[itemI]}}</text>
+          <text class='item-info-item-title'>{{map[itemI]}}</text>
           <text class='item-info-item-value'>{{data[itemI]}}</text>
         </view>
         <view class='item-info-item-border' wx:if="{{index !==itemKeyList.length-1}}"></view>
