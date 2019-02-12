@@ -3,7 +3,39 @@
 .container {
   position: relative;
 }
-
+.slide-img{
+  width: 100%;
+}
 .tabs {
   margin-top: 15rpx;
+}
+
+.tool-bar{
+  position: fixed;
+  bottom: 40rpx;
+  right: 40rpx;
+}
+.tool-bar-item{
+  margin-bottom: 20rpx;
+  padding: 0;
+  line-height: normal;
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(204,204,204,0.3);
+  box-shadow: 1px 1px 6px #ccc;
+}
+.tool-bar-item-icon{
+  width: 26rpx;
+  height: 26rpx;
+}
+.tool-bar-item-text{
+  font-size: 28rpx;
+  color: #000;
 }

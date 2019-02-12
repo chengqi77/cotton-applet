@@ -5,7 +5,7 @@
     "tabs": "../../components/tabs/index",
     "tab": "../../components/tab/index",
     "search-tool": "../../components/search-tool/index",
-    "tag": "../../components/tag/index",
+   
     "home-item": "../../components/home-item/index"
   }
 }

@@ -1,23 +1,31 @@
 <view class="container">
   <search-tool />
+  <view class='tool-bar'>
+    <button  open-type='share' class='tool-bar-item'>
+      <image src='./img/share.png' class='tool-bar-item-icon'></image>
+      <text class='tool-bar-item-text'>分享</text>
+    </button>
+    <button open-type="contact" class='tool-bar-item'>
+      <image src='./img/kf.png' class='tool-bar-item-icon'></image>
+      <text class='tool-bar-item-text'>客服</text>
+    </button>
+  </view>
   <loading loading="{{banner.loading}}" height="280rpx" tip="获取图片中...">
     <swiper indicator-dots="true" autoplay="true" interval="3000" duration="300" style="height:280rpx">
       <block wx:for="{{banner.data}}">
         <swiper-item>
-          <image src="{{item}}" />
+          <image class='slide-img' src="{{item}}" />
         </swiper-item>
       </block>
     </swiper>
   </loading>
   <notice-bar loop="true" data="{{notices}}" />
   <tabs current="{{activeTabKey}}" bindchange="handleTabChange" i-class="tabs" scroll>
-    <tab key="a" title="新疆棉" count="3">
-      112
-    </tab>
+    <tab key="a" title="新疆棉" count="3"></tab>
     <tab key="b" title="地产棉" count="3"></tab>
     <tab key="c" title="进口棉" count="3"></tab>
     <tab key="d" title="进口棉" count="3"></tab>
     <tab key="e" title="拍储棉" count="3"></tab>
   </tabs>
-  <home-item wx:for="{{list}}" data="{{item}}" bind:handleCall="handleCall" bind:handleClickShoppingCart="handleClickShoppingCart"/>
+  <home-item wx:for="{{list}}" data="{{item}}" bind:handleCall="handleCall" bind:handleClickShoppingCart="handleClickShoppingCart" />
 </view>
