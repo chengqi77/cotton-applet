@@ -5,24 +5,46 @@
         <tab key="import" title="进口棉花"></tab>
     </tabs>
     <view class="content">
-        <block wx:for="{{radio}}" wx:key="item.key">
-            <view class="radio-item">
-                <text class="title">{{item.label}}</text>
-                <view class="radio-item-content">
-                    <tag wx:for="{{option[item.key]}}" wx:for-item="optionItem" class="{{index === radio.lenth-1?'':'mr'}}" bindtap="clickTag" data-key="{{item.key}}" data-label="{{optionItem.label}}" color="{{selected[item.key] === optionItem.label?'green':'#ccc'}}">
-                        {{optionItem.label}}
-                    </tag>
+        <view class="conent-top">
+            <block wx:for="{{radio}}" wx:key="item.key">
+                <view class="radio-item">
+                    <text class="title">{{item.label}}</text>
+                    <view class="radio-item-content">
+                        <tag wx:for="{{option[item.key]}}" wx:for-item="optionItem" class="{{index === radio.lenth-1?'':'mr'}}" bindtap="clickTag" data-key="{{item.key}}" data-label="{{optionItem.label}}" color="{{selected[item.key] === optionItem.label?'green':'#ccc'}}">
+                            {{optionItem.label}}
+                        </tag>
+                    </view>
                 </view>
-            </view>
-        </block>
-        <text class="title">质量</text>
-        <block wx:for="{{picker}}" wx:for-item="group">
-            <view class="picker-group">
-                <t-picker wx:for="{{group}}" bind:onChange="hanldChange" label="{{item.label}}" key="{{item.key}}" value="{{selected[item.key]}}"></t-picker>
-            </view>
-        </block>
-
-        <i-input value="{{ value1 }}" title="收货人" />
-         <i-input value="{{ value1 }}" title="收货人" />
+            </block>
+            <text class="title">质量</text>
+            <block wx:for="{{picker}}" wx:for-item="group">
+                <view class="picker-group">
+                    <t-picker wx:for="{{group}}" bind:onChange="hanldChange" label="{{item.label}}" key="{{item.key}}" value="{{selected[item.key]}}"></t-picker>
+                </view>
+            </block>
+        </view>
+        <view class="list">
+            <block wx:for="{{list}}">
+                <view class="item {{index === list.length-1?'':'item-border'}}">
+                    <text class="item-label">{{item.label}}</text>
+                    <view class="item-content" wx:if="{{item.key !== 'zwjgsj'}}">
+                        <input disabled="{{item.key === 'sfdwxsbj'}}" type="text" class="item-input" placeholder="{{item.placeholder}}" />
+                        <image wx:if="{{item.key === 'lxr'|| item.key === 'sfdwxsbj'}}" bindtap="toggle" class="item-icon" src="{{show?'./img/show.png':'./img/hide.png'}}"></image>
+                        <picker wx:if="{{item.key === 'xqsl'}}" mode="selector" bindchange="hanldUnitChange" value="{{unit}}" range="{{units}}">
+                            <text class="item-unit">{{unit}}</text>
+                        </picker>
+                    </view>
+                    <block wx:if="{{item.key === 'zwjgsj'}}">
+                        <picker class="date-picker" mode="date" bindchange="hanldDateChange" value="{{time}}">
+                            <view class="item-content">
+                                <input disabled="true" value="{{time}}" type="text" class="item-input" placeholder="{{item.placeholder}}" />
+                                <image class="item-icon" src="./img/date.png"></image>
+                            </view>
+                        </picker>
+                    </block>
+                </view>
+            </block>
+        </view>
+        <i-button bind:click="handleClick" type="primary" size="small">发布</i-button>
     </view>
 </view>

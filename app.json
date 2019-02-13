@@ -34,6 +34,7 @@
     "tabs": "./components/tabs/index",
     "tab": "./components/tab/index",
     "t-picker": "./components/tpicker/index",
-    "i-input": "./components/input/index"
+    "i-input": "./components/input/index",
+    "i-button": "./components/button/index"
   }
 }
