@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/demand-custom/index",
     "pages/demand-detail/index",
     "pages/details/details",
     "pages/home/index",
@@ -29,6 +30,10 @@
     ]
   },
   "usingComponents": {
-    "panel": "./components/panel/index"
+    "tag": "./components/tag/index",
+    "tabs": "./components/tabs/index",
+    "tab": "./components/tab/index",
+    "tpicker": "./components/tpicker/index",
+    "iinput": "./components/input/index"
   }
 }

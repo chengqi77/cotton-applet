@@ -1,0 +1,25 @@
+<!-- pages/demand-custom/index.wxml -->
+<view class="container">
+    <tabs current="{{ activeKey }}" bindchange="handleTabChange">
+        <tab key="domestic" title="国产棉花"></tab>
+        <tab key="import" title="进口棉花"></tab>
+    </tabs>
+    <view class="content">
+        <block wx:for="{{radio}}" wx:key="item.key">
+            <view class="radio-item">
+                <text class="title">{{item.label}}</text>
+                <view class="radio-item-content">
+                    <tag wx:for="{{option[item.key]}}" wx:for-item="optionItem" class="{{index === radio.lenth-1?'':'mr'}}" bindtap="clickTag" data-key="{{item.key}}" data-label="{{optionItem.label}}" color="{{selected[item.key] === optionItem.label?'green':'#ccc'}}">
+                        {{optionItem.label}}
+                    </tag>
+                </view>
+            </view>
+        </block>
+        <text class="title">质量</text>
+        <block wx:for="{{picker}}" wx:for-item="group">
+            <view class="picker-group">
+                <tpicker wx:for="{{group}}" bind:onChange="hanldChange" label="{{item.label}}" key="{{item.key}}" value="{{selected[item.key]}}"></tpicker>
+            </view>
+        </block>
+    </view>
+</view>

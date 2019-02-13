@@ -1,0 +1,7 @@
+<!-- components/tpicker/index.wxml -->
+<picker mode="selector" bindchange="hanldChange" value="{{value}}" range="{{range}}">
+    <view class="picker">
+        <text class="label">{{label}}:</text>
+        <text class="value">{{value || '请选择'}}</text>
+    </view>
+</picker>

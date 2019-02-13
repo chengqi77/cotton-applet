@@ -1,0 +1,16 @@
+/* components/tpicker/index.wxss */
+picker{
+    display: inline-block;
+}
+.picker {
+    margin: 0;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 4px;
+    border-radius: 2px;
+    background: #fff;
+    font-size: 11px;
+    vertical-align: middle;
+    border: 1rpx solid #dddee1;
+}
