@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/details/details",
+    "pages/home/home",
     "pages/supply-demand/index",
     "pages/home/home",
     
