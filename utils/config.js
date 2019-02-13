@@ -18,6 +18,12 @@ const map = {
     mj: '买家',
     zwjhsj: '最晚交货时间',
     cgjs: '采购结束',
+
+    sl:'数量',
+    ztj:'自提价',
+    dcj:'到场价',
+
+    gys:'供应商'
   }
 };
 const config = {

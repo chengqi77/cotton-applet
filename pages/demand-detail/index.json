@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "需求详情页",
+  "usingComponents": {
+    "tag": "../../components/tag/index"
+  }
+}

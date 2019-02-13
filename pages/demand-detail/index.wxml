@@ -1,0 +1,76 @@
+<!-- pages/demand/index.wxml -->
+<view class="container">
+    <view class="demand-box">
+        <view class='item-title'>
+            <view class='item-title-left'>
+                <text class='item-name'>需求编号</text>
+                <text class='item-value'>({{data.id}})</text>
+            </view>
+            <view class='item-title-right'>
+                <view class='item-tags'>
+                    <tag>长绒棉</tag>
+                    <tag>新疆全省</tag>
+                </view>
+            </view>
+        </view>
+        <view class='item-info-list'>
+            <block wx:for="{{keyList}}" wx:for-item="itemI">
+                <view class="item-info-item">
+                    <view class='item-info-item-content'>
+                        <text class='item-info-item-title'>{{map[itemI]}}</text>
+                        <text class='item-info-item-value'>{{data[itemI]}}</text>
+                    </view>
+                    <view class='item-info-item-border' wx:if="{{index !==itemKeyList.length-1}}"></view>
+                </view>
+            </block>
+        </view>
+        <view class='item-desc-list'>
+            <block wx:for="{{descList}}" wx:for-item="itemI">
+                <view class="item-desc-item {{index === itemDescList.length - 1?'item-desc-item-noborder':''}}">
+                    <text class='item-desc-item-label'>{{map[itemI]}}</text>
+                    <view class="item-desc-item-right">
+                        <text class='item-desc-item-text'>{{data[itemI]}}</text>
+                        <view bindtap="goBuyerDetail" class="button" wx:if="{{itemI === 'mj'}}">
+                            详情
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <text class="title">供应商报价</text>
+    <block wx:for="{{list}}">
+        <view class='item'>
+            <view class='item-title'>
+                <view class='item-title-left'>
+                    <text class='item-name'>报价编号</text>
+                    <text class='item-value'>({{data.id}})</text>
+                </view>
+                <text class='item-time'>2019-02-01</text>
+            </view>
+            <view class='item-info-list'>
+                <block wx:for="{{itemKeyList}}" wx:for-item="itemI">
+                    <view class="item-info-item">
+                        <view class='item-info-item-content'>
+                            <text class='item-info-item-title'>{{map[itemI]}}</text>
+                            <text class='item-info-item-value'>{{data[itemI]}}</text>
+                        </view>
+                        <view class='item-info-item-border' wx:if="{{index !==itemKeyList.length-1}}"></view>
+                    </view>
+                </block>
+            </view>
+            <view class='item-desc-list'>
+                <block wx:for="{{itemDescList}}" wx:for-item="itemI">
+                    <view class="item-desc-item {{index === itemDescList.length - 1?'item-desc-item-noborder':''}}">
+                        <text class='item-desc-item-label'>{{map[itemI]}}</text>
+                        <view class="item-desc-item-right">
+                            <image class="call" src="./img/call.png"></image>
+                            <text class='item-desc-item-text'>{{data[itemI]}}</text>
+                            <view bindtap="goBuyerDetail" class="button">详情</view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </block>
+</view>

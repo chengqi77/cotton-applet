@@ -1,10 +1,9 @@
 {
   "pages": [
+    "pages/demand-detail/index",
     "pages/details/details",
-    "pages/home/home",
+    "pages/home/index",
     "pages/supply-demand/index",
-    "pages/home/home",
-    
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -20,7 +19,7 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/home/index",
         "text": "首页"
       },
       {
@@ -28,5 +27,8 @@
         "text": "供需"
       }
     ]
+  },
+  "usingComponents": {
+    "panel": "./components/panel/index"
   }
 }
