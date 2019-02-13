@@ -28,11 +28,93 @@ Page({
     e: '0.0',
     f: '0.0',
 
-    zhc:'133',
-    kc:'rere',
-    gys:"1230",
+      zhc:'地址地址地址地址',
+      kc:'地址地址地址地址地址地址',
+      gys:"地址地址地址--",
     },
     current: 'a',
+    detailsTableLongArr:[
+      {
+        title: '最小值',
+        value: '3.8'
+      },
+      {
+        title: '最大值',
+        value: '3.8'
+      }, {
+        title: '平均值',
+        value: '3.8'
+      },
+    ],
+    detailsTableMlArr:[
+      {
+        title:'C1',
+        value:'3.8'
+      },
+      {
+        title: 'B1',
+        value: '2.8'
+      },
+      {
+        title: 'A',
+        value: '3.8'
+      }, {
+        title: 'B2',
+        value: '3.8'
+      },
+    ],
+    detailsTableColorArr: [
+      {
+        title: '27MM',
+        value: '10.8'
+      },
+      {
+        title: '白棉4级',
+        value: '55.4'
+      },
+      {
+        title: '27MM',
+        value: '20包'
+      },
+      {
+        title: '',
+        value: ''
+      },
+      ],
+    detailsTabletopArr:[
+      {
+        title:'合计包数',
+        value:'20包'
+      },
+      {
+        title: '质量标识',
+        value: '-'
+      },
+      {
+        title: '合计毛重',
+        value: '-'
+      },
+      {
+        title: '平均回潮',
+        value: '-'
+      },
+      {
+        title: '合计皮重',
+        value: '6.5Kg'
+      },
+      {
+        title: '平均含杂',
+        value: '2.8'
+      },
+      {
+        title: '合计净重',
+        value: '6.5Kg'
+      },
+      {
+        title: '合计公重',
+        value: '-'
+      },
+    ],
     map,
     AddressList,
     itemKeyList: ['q','a', 'b', 'c', 'd', 'e', 'f'],

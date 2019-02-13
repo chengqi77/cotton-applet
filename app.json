@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/details/details",
     "pages/demand-custom/index",
     "pages/demand-detail/index",
-    "pages/details/details",
+   
     "pages/home/index",
     "pages/supply-demand/index",
     "pages/index/index",

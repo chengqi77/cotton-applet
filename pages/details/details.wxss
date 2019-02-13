@@ -50,7 +50,80 @@
   margin-bottom: 10rpx;
 }
 .addressList{
-  padding: 0 5%;
+  padding: 5px 5%;
    background: white;
-   height: 100rpx;
+   height: 40rpx;
+   display: flex;
+   align-items: center;
 }
+.addressTit{
+  color: rgb(83, 106, 240);
+  font-size: 35rpx;
+  padding-right: 8px;
+  
+}
+.addressText{
+  font-size: 30rpx;
+  color: rgb(196, 193, 193);
+  padding-right: 10px;
+}
+.pzdi{
+  display: flex;
+  justify-content: space-between;
+  padding: 18rpx 5%;
+  background: white;
+  margin-top: 10rpx;
+}
+.pzdiTit{
+  padding-right: 8rpx;
+  color: rgb(83, 106, 240);
+ font-size: 35rpx;
+}
+.pzdiText{
+   font-size: 35rpx;
+  color: rgb(196, 193, 193);
+}
+.detailsTable{
+  margin-top: 30rpx;
+  background: white;
+ border: 1px solid #d5d5d5;
+ height: 240rpx;
+}
+.detailsTable1{
+  margin-top: 30rpx;
+  background: white;
+ border: 1px solid #d5d5d5;
+ height: 180rpx;
+ width: 100%;
+}
+.detailsTabletop{
+  padding: 0 5%;  
+  background: white;
+  float: left;
+  width: 39.8%;
+  height: 60rpx;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d5d5d5;
+  font-size: 30rpx;
+  color: #928b8b;
+}
+.detailsTabletop:nth-child(odd){
+  border-right: 1px solid #d5d5d5
+}
+.line{
+  height: 10rpx;
+  background: red;
+  width: 100%;
+}
+.Tablecenter{
+  height: 100rpx;
+  border-bottom: 1px solid #d5d5d5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 30rpx;
+  color: #32adff
+   }
