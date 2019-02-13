@@ -1,2 +1,61 @@
-<!--pages/supply-demand/index.wxml-->
-<text>pages/supply-demand/index.wxml</text>
+<!-- pages/supply-demand/index.wxml -->
+<view class='container'>
+  <block wx:for="{{list}}">
+    <view class='item'>
+      <view class='item-title'>
+        <view class='item-title-left'>
+          <text class='item-name'>需求编号</text>
+          <text class='item-value'>({{item.id}})</text>
+        </view>
+        <view class='item-title-right'>
+          <view class='item-tags'>
+            <tag>长绒棉</tag>
+            <tag>新疆全省</tag>
+          </view>
+        </view>
+      </view>
+      <view class='item-info-list'>
+        <block wx:for="{{itemKeyList}}" wx:for-item="itemI">
+          <view class="item-info-item">
+            <view class='item-info-item-content'>
+              <text class='item-info-item-title'>{{map[itemI]}}</text>
+              <text class='item-info-item-value'>{{item[itemI]}}</text>
+            </view>
+            <view class='item-info-item-border' wx:if="{{index !==itemKeyList.length-1}}"></view>
+          </view>
+        </block>
+      </view>
+      <view class='item-bottom'>
+        <view class='item-desc-list'>
+          <block wx:for="{{itemDescList}}" wx:for-item="itemI">
+            <view class="item-desc-item">
+              <text class='item-desc-item-label'>{{map[itemI]}}</text>
+              <text class='item-desc-item-text'>:{{item[itemI]}}</text>
+            </view>
+          </block>
+        </view>
+        <view class='btn-group'>
+          <view class='btn' bindtap="offer" data-item="{{item}}">
+            <image class='btn-icon' src='./img/bj.png'></image>
+            <text class='btn-text'>我要报价</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <modal visible="{{ isModalVisible }}" bind:ok="handOk" bind:cancel="handleCancel">
+    <view class="modal-container">
+      <i-input value="{{ value1 }}" title="数量" type="number" />
+      <i-input value="{{ value2 }}" title="自提价" type="number" />
+      <i-input value="{{ value2 }}" title="到厂价" type="number" />
+      <view class="modal-item">
+        <text class="modal-item-label">单位</text>
+        <view class="modal-item-content">
+          <radio-group current="{{unit}}" bindchange="handleUnitChange">
+            <radio wx:for="{{unitList}}" wx:key="{{item.id}}" value="{{item.name}}"></radio>
+          </radio-group>
+        </view>
+      </view>
+    </view>
+  </modal>
+</view>

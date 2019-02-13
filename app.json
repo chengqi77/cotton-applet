@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/home/home",
     "pages/supply-demand/index",
+    "pages/home/home",
+    
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/supply-demand"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
