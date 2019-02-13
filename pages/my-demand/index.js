@@ -16,6 +16,12 @@ const item = {
   mj: '盐城捷多纺织品有限公司',
   zwjhsj: '2019-01-01',
   cgjs: '200d吨',
+
+  sl: '12',
+  ztj: '1231',
+  dcj: '1331',
+
+  xqbh:'12132987130'
 };
 
 Page({
@@ -24,11 +30,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    activeKey: 'demand',
+    activeKey: 'offer',
     list: [item, item, item, item, item],
     map: config.map.main,
     itemKeyList: ['ysj', 'cd', 'ql', 'mz', 'cz', 'hz', 'jg'],
+    offerItemKeyList: ['sl', 'ztj', 'dcj'],
     itemDescList: ['mj', 'cgjs', 'shd', 'zwjhsj'],
+    offerItemDescList: ['xqbh', 'mj'],
   },
   handleTabChange(e) {
     const { detail: { key } } = e;
@@ -76,7 +84,7 @@ Page({
    */
   onPullDownRefresh: function () {
     wx.showNavigationBarLoading();
-    setTimeout(()=>{
+    setTimeout(() => {
       wx.hideNavigationBarLoading();
       wx.stopPullDownRefresh();
     }, 1000);

@@ -23,7 +23,9 @@ const map = {
     ztj:'自提价',
     dcj:'到场价',
 
-    gys:'供应商'
+    gys:'供应商',
+
+    xqbh:'需求编号'
   }
 };
 const config = {
