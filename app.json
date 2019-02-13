@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/details/details",
+    "pages/my-demand/index",
     "pages/demand-custom/index",
     "pages/demand-detail/index",
    
@@ -35,6 +36,9 @@
     "tabs": "./components/tabs/index",
     "tab": "./components/tab/index",
     "t-picker": "./components/tpicker/index",
-    "i-input": "./components/input/index"
+    "i-input": "./components/input/index",
+    "i-button": "./components/button/index",
+    "modal": "./components/modal/index",
+    "radio": "./components/radio/index"
   }
 }

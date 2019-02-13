@@ -47,7 +47,19 @@ Page({
         { key: 'hz', label: '含杂' },
         { key: 'zqd', label: '整齐度' }
       ]
-    ]
+    ],
+    list: [
+      { key: 'lxr', label: '联系人', placeholder: 'xxx 13888888888' },
+      { key: 'xqdw', label: '需求单位', placeholder: '' },
+      { key: 'xqsl', label: '需求数量', placeholder: '请填写需求数量' },
+      { key: 'shd', label: '收货地', placeholder: '请输入交货地' },
+      { key: 'zwjgsj', label: '最晚交割时间', placeholder: '年/月/日' },
+      { key: 'sfdwxsbj', label: '是否对外显示报价' },
+    ],
+    show: true,
+    units: ['吨', '批', '柜'],
+    unit: '吨',
+    time:'',
   },
   handleTabChange(e) {
     const { detail: { key } } = e;
@@ -66,6 +78,24 @@ Page({
     const { key, value } = e.detail;
     this.setData({
       selected: { ...this.data.selected, [key]: value }
+    });
+  },
+  toggle() {
+    this.setData({
+      show: !this.data.show
+    })
+  },
+  hanldUnitChange(e) {
+    const { detail: { value } } = e;
+    const { units } = this.data;
+    this.setData({
+      unit: units[value]
+    });
+  },
+  hanldDateChange(e) {
+    const { detail: { value } } = e;
+    this.setData({
+      time: value
     });
   },
   /**

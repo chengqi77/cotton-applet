@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的供需",
+  "enablePullDownRefresh":true,
+  "disableScroll": false ,
+  "usingComponents": {}
+}
