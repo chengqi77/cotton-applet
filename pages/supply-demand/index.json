@@ -1,9 +1,6 @@
 {
   "navigationBarTitleText": "需求",
   "usingComponents": {
-    "tag": "../../components/tag/index",
-    "modal": "../../components/modal/index",
-    "i-input": "../../components/input/index",
-    "radio": "../../components/radio/index"
+   
   }
 }
