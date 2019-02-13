@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/details/details",
+    "pages/agency-detail/index",
+    "pages/spot-details/details",
     "pages/my-demand/index",
     "pages/demand-custom/index",
     "pages/demand-detail/index",

@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "现货指数详情",
   "usingComponents": {
     "tabs": "../../components/tabs/index",
     "tab": "../../components/tab/index",
