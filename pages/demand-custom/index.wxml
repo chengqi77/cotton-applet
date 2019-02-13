@@ -18,8 +18,11 @@
         <text class="title">质量</text>
         <block wx:for="{{picker}}" wx:for-item="group">
             <view class="picker-group">
-                <tpicker wx:for="{{group}}" bind:onChange="hanldChange" label="{{item.label}}" key="{{item.key}}" value="{{selected[item.key]}}"></tpicker>
+                <t-picker wx:for="{{group}}" bind:onChange="hanldChange" label="{{item.label}}" key="{{item.key}}" value="{{selected[item.key]}}"></t-picker>
             </view>
         </block>
+
+        <i-input value="{{ value1 }}" title="收货人" />
+         <i-input value="{{ value1 }}" title="收货人" />
     </view>
 </view>

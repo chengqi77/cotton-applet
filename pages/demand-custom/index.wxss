@@ -11,6 +11,6 @@
 .mr{
     margin-right: 10rpx;
 }
-.picker-group tpicker{
+.picker-group t-picker{
     margin-right: 10rpx;
 }

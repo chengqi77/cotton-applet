@@ -33,7 +33,7 @@
     "tag": "./components/tag/index",
     "tabs": "./components/tabs/index",
     "tab": "./components/tab/index",
-    "tpicker": "./components/tpicker/index",
-    "iinput": "./components/input/index"
+    "t-picker": "./components/tpicker/index",
+    "i-input": "./components/input/index"
   }
 }
