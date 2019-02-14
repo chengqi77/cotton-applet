@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/report/index",
+    "pages/offer/index",
     "pages/agency-detail/index",
     "pages/spot-details/details",
     "pages/my-demand/index",
@@ -31,7 +31,7 @@
         "text": "供需"
       },
       {
-        "pagePath": "pages/report/index",
+        "pagePath": "pages/offer/index",
         "text": "云报价工具"
       }
     ]
