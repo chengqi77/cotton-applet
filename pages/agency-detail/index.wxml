@@ -1,0 +1,13 @@
+<view class='container'>
+<view class='agency_container'>
+ <text>重粗出棉裤有限公司</text>
+ <text>地址：地址--</text>
+ <text>联系方式:0551-656</text>
+ <view>
+ <map id="myMap" show-location />
+ <view>
+ <button type="primary" bindtap="getCenterLocation">获取位置</button>
+ </view>
+ </view>
+</view>
+</view>
