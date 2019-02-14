@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/report/index",
     "pages/agency-detail/index",
     "pages/spot-details/details",
     "pages/my-demand/index",
     "pages/demand-custom/index",
     "pages/demand-detail/index",
-   
     "pages/home/index",
     "pages/supply-demand/index",
     "pages/index/index",
@@ -29,6 +29,10 @@
       {
         "pagePath": "pages/supply-demand/index",
         "text": "供需"
+      },
+      {
+        "pagePath": "pages/report/index",
+        "text": "云报价工具"
       }
     ]
   },
@@ -40,6 +44,7 @@
     "i-input": "./components/input/index",
     "i-button": "./components/button/index",
     "modal": "./components/modal/index",
-    "radio": "./components/radio/index"
+    "radio-group": "./components/radio-group/index",
+    "i-radio": "./components/radio/index"
   }
 }

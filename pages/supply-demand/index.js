@@ -27,7 +27,7 @@ Page({
     map: config.map.main,
     itemKeyList: ['ysj', 'cd', 'ql', 'mz', 'cz', 'hz', 'jg'],
     itemDescList: ['mj', 'cgjs', 'shd', 'zwjhsj'],
-    isModalVisible: true,
+    isModalVisible: false,
     unitList:[
       {
         id:'dun',
@@ -41,7 +41,8 @@ Page({
         id:'柜',
         name:'柜'
       }
-    ]
+    ],
+    unit:'吨'
   },
   offer(event) {
     const item = event.currentTarget.dataset.item;
@@ -59,7 +60,11 @@ Page({
       isModalVisible,
     });
   },
-
+  handleUnitChange({ detail = {} }) {
+    this.setData({
+        unit: detail.value
+    });
+},
   /**
    * 生命周期函数--监听页面加载
    */

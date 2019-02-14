@@ -123,7 +123,10 @@
     align-items: center;
     color: #495060;
 }
-
+radio-group view{
+    display: flex;
+    flex-direction: row;
+}
 .modal-item-label {
     padding-left: 15px;
 }

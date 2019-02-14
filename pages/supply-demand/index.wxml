@@ -52,7 +52,7 @@
         <text class="modal-item-label">单位</text>
         <view class="modal-item-content">
           <radio-group current="{{unit}}" bindchange="handleUnitChange">
-            <radio wx:for="{{unitList}}" wx:key="{{item.id}}" value="{{item.name}}"></radio>
+            <i-radio wx:for="{{unitList}}" wx:key="{{item.id}}" value="{{item.name}}"></i-radio>
           </radio-group>
         </view>
       </view>
